@@ -1,0 +1,61 @@
+毕重科老师主讲了哪些课?
+PREFIX kg: <http://kg.course/informations/>
+
+SELECT DISTINCT ?x0 WHERE {
+    kg:毕重科 kg:teacher_courses ?x0
+}
+
+Result: http://kg.course/informations/可视语言与信息可视化
+
+毕重科老师的导师类型是什么?
+PREFIX kg: <http://kg.course/informations/>
+
+SELECT DISTINCT ?x0 WHERE {
+    kg:毕重科 kg:teacher_type ?x0
+}
+
+Result: http://kg.course/informations/硕士生导师
+
+硕士生导师的老师有哪些？
+PREFIX kg: <http://kg.course/informations/>
+
+SELECT DISTINCT ?x0 WHERE {
+    ?x0 kg:teacher_type kg:硕士生导师
+}
+
+Result: http://kg.course/informations/毕重科
+Result: http://kg.course/informations/陈锦言
+Result: http://kg.course/informations/陈仁海
+Result: http://kg.course/informations/戴维迪
+Result: http://kg.course/informations/杜朴风
+
+博士生导师的老师有哪些？
+PREFIX kg: <http://kg.course/informations/>
+
+SELECT DISTINCT ?x0 WHERE {
+    ?x0 kg:teacher_type kg:博士生导师
+}
+
+Result: http://kg.course/informations/陈俊洁
+Result: http://kg.course/informations/陈世展
+Result: http://kg.course/informations/冯伟
+Result: http://kg.course/informations/冯志勇
+
+宫秀军老师的研究方向是什么？
+PREFIX kg: <http://kg.course/informations/>
+
+SELECT DISTINCT ?x0 WHERE {
+    kg:宫秀军 kg:teacher_direction ?x0
+}
+
+Result: http://kg.course/informations/贝叶斯学习理论、分布式数据挖掘、复杂系统集成
+
+宫秀军老师的个人主页是什么？
+PREFIX kg: <http://kg.course/informations/>
+
+SELECT DISTINCT ?x0 WHERE {
+    kg:宫秀军 kg:teacher_webpage ?x0
+}
+
+Result: http://kg.course/informations/http://cic.tju.edu.cn/faculty/gongxj/index.htm
+
